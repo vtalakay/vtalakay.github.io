@@ -4,27 +4,27 @@
 
 body {
     margin: 0;
-    padding: 0;
-    background-color: #f2f2f2;
+    background-color: #9e9e9e;
     color: #333333;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, "Helvetica Neue", sans-serif;
     line-height: 1.6;
 }
 
-/* Header */
+
+/* ================================
+   HEADER
+   ================================ */
 
 header {
-    background-color: #1d3557;
-    color: #ffffff;
+    background-color: #000033;
+    color: white;
     text-align: center;
-    padding: 25px;
+    padding: 25px 15px;
 }
 
 header h1 {
     margin: 0;
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 2.2em;
-    letter-spacing: 1px;
+    font-size: 2em;
 }
 
 header p {
@@ -32,108 +32,153 @@ header p {
     font-size: 1.1em;
 }
 
-/* Navigation */
+
+/* ================================
+   NAVIGATION
+   ================================ */
 
 nav {
-    background-color: #457b9d;
+    background-color: #003366;
+    display: flex;
+    flex-direction: column;
     text-align: center;
-    padding: 15px;
 }
 
 nav a {
-    color: #ffffff;
+    color: white;
     text-decoration: none;
+    padding: 12px;
+    border-bottom: 1px solid #557799;
     font-weight: bold;
-    margin: 0 15px;
 }
 
 nav a:hover {
-    text-decoration: underline;
+    background-color: #90C7E3;
+    color: #000033;
 }
 
-/* Main Content */
+
+/* ================================
+   MAIN CONTENT
+   ================================ */
 
 main {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 30px;
+    background-color: #9e9e9e;
+    padding: 20px;
 }
 
-/* Hero Section */
+h2 {
+    color: #000033;
+    text-align: center;
+    margin-top: 0;
+}
+
+h3 {
+    color: #003366;
+}
+
+h4 {
+    color: #000033;
+}
+
+
+/* ================================
+   HOME PAGE HERO
+   ================================ */
 
 .hero {
-    background-color: #ffffff;
+    background-color: #DCEFF8;
     text-align: center;
-    padding: 60px 30px;
+    padding: 45px 20px;
     margin-bottom: 35px;
     border-radius: 8px;
 }
 
 .hero h2 {
-    color: #1d3557;
     font-size: 2em;
-    margin-top: 0;
+    margin-bottom: 15px;
 }
 
 .hero p {
-    max-width: 750px;
+    max-width: 800px;
     margin: 0 auto 25px;
-    font-size: 1.1em;
 }
 
-/* Buttons */
+
+/* ================================
+   BUTTONS
+   ================================ */
 
 .button {
     display: inline-block;
-    background-color: #1d3557;
-    color: #ffffff;
+    background-color: #003366;
+    color: white;
     text-decoration: none;
-    padding: 12px 25px;
+    padding: 12px 22px;
     margin: 5px;
     border-radius: 5px;
     font-weight: bold;
 }
 
 .button:hover {
-    background-color: #457b9d;
+    background-color: #90C7E3;
+    color: #000033;
 }
 
-/* Recommended Cars */
+
+/* ================================
+   PAGE INTRODUCTION
+   ================================ */
+
+.page-intro {
+    background-color: #DCEFF8;
+    padding: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.page-intro p {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+
+/* ================================
+   RECOMMENDED CARS
+   ================================ */
 
 .recommended {
     margin-bottom: 40px;
 }
 
-.recommended h2,
-.why h2 {
-    color: #1d3557;
-    text-align: center;
-    font-size: 1.8em;
-    margin-bottom: 25px;
-}
-
 .car-container {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr;
     gap: 25px;
-    justify-content: center;
 }
 
 .car-card {
-    background-color: #ffffff;
-    width: 32%;
+    background-color: #F5F5F5;
+    border: 1px solid #CCCCCC;
+    border-radius: 8px;
     padding: 20px;
     text-align: center;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px #cccccc;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
 }
 
 .car-card h3 {
-    color: #1d3557;
-    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+.car-card p {
+    margin-bottom: 15px;
 }
 
 .car-card a {
-    color: #1d3557;
+    color: #003366;
     font-weight: bold;
     text-decoration: none;
 }
@@ -142,97 +187,348 @@ main {
     text-decoration: underline;
 }
 
-/* Temporary Car Image Areas */
 
-.car-image {
-    height: 150px;
-    background-color: #d9eaf7;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 5px;
-    color: #1d3557;
-    font-weight: bold;
+/* ================================
+   CAR IMAGES
+   ================================ */
+
+.car-photo {
+    width: 100%;
+    max-width: 350px;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 15px;
+    border-radius: 6px;
 }
 
-/* What We Look For */
+.car-card ul {
+    text-align: left;
+    padding-left: 25px;
+}
+
+
+/* ================================
+   WHAT WE LOOK FOR
+   ================================ */
 
 .why {
-    background-color: #ffffff;
-    padding: 30px;
-    border-radius: 8px;
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 
 .features {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr;
     gap: 20px;
 }
 
 .features div {
-    flex: 1;
-    text-align: center;
-    padding: 15px;
+    background-color: #F5F5F5;
+    border: 1px solid #CCCCCC;
+    padding: 20px;
+    border-radius: 8px;
 }
 
 .features h3 {
-    color: #457b9d;
+    margin-top: 0;
 }
 
-/* Footer */
 
-footer {
-    background-color: #1d3557;
-    color: #ffffff;
+/* ================================
+   COMPARE PAGE
+   ================================ */
+
+.comparison {
+    margin-bottom: 40px;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #DCEFF8;
+    border: 2px solid #003366;
+}
+
+
+/* Bold all table information */
+
+table th,
+table td {
+    border: 1px solid #003366;
+    padding: 14px 10px;
     text-align: center;
-    padding: 25px;
-    margin-top: 30px;
+    font-weight: bold;
 }
 
-.footer-links {
+
+/* Table header */
+
+table thead th {
+    background-color: #000033;
+    color: white;
+    font-weight: bold;
+}
+
+
+/* Vehicle names */
+
+table tbody th {
+    background-color: #BFE3F2;
+    color: #000033;
+    font-weight: bold;
+}
+
+
+/* Light blue table information */
+
+table tbody td {
+    background-color: #DCEFF8;
+    color: #333333;
+    font-weight: bold;
+}
+
+
+/* Alternating table rows */
+
+table tbody tr:nth-child(even) td {
+    background-color: #CDEAF5;
+}
+
+
+/* Table hover */
+
+table tbody tr:hover td,
+table tbody tr:hover th {
+    background-color: #A9D8EC;
+}
+
+
+/* ================================
+   TABLE NOTE
+   ================================ */
+
+.table-note {
+    margin-top: 15px;
+    font-size: 0.9em;
+    color: white;
+}
+
+
+/* ================================
+   COMPARISON NOTES
+   ================================ */
+
+.comparison-notes {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+
+/* ================================
+   BUYING GUIDE
+   ================================ */
+
+.buying-section {
+    background-color: #F5F5F5;
+    border-left: 5px solid #003366;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.buying-section h2 {
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.buying-section p {
+    margin-bottom: 0;
+}
+
+.buying-section ul {
+    margin-bottom: 0;
+}
+
+
+/* ================================
+   CONTACT FORM
+   ================================ */
+
+.contact-form {
+    max-width: 800px;
+    margin: 0 auto 40px;
+    background-color: #F5F5F5;
+    padding: 30px;
+    border: 1px solid #CCCCCC;
+    border-radius: 8px;
+}
+
+.contact-form h2 {
+    margin-bottom: 25px;
+}
+
+form {
+    display: grid;
+    gap: 10px;
+}
+
+label {
+    font-weight: bold;
+    color: #000033;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #999999;
+    border-radius: 4px;
+    font-family: Arial, "Helvetica Neue", sans-serif;
+    font-size: 1em;
+}
+
+textarea {
+    resize: vertical;
+}
+
+
+/* Form buttons */
+
+input[type="submit"],
+input[type="reset"] {
+    background-color: #003366;
+    color: white;
+    border: none;
+    padding: 12px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    background-color: #90C7E3;
+    color: #000033;
+}
+
+
+/* ================================
+   CONTACT INFORMATION
+   ================================ */
+
+.contact-information {
+    max-width: 800px;
+    margin: 0 auto 40px;
+    padding: 25px;
+    background-color: #DCEFF8;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.contact-information h2 {
     margin-bottom: 15px;
 }
 
-.footer-links a {
-    color: #ffffff;
-    text-decoration: none;
-    margin: 0 10px;
+.contact-information a {
+    color: #003366;
+    font-weight: bold;
 }
 
-.footer-links a:hover {
-    text-decoration: underline;
+
+/* ================================
+   FOOTER
+   ================================ */
+
+footer {
+    background-color: #000033;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
 }
 
 footer p {
-    margin: 5px;
+    margin: 8px 0;
 }
 
-/* Mobile Layout */
+footer a {
+    color: white;
+    text-decoration: none;
+}
 
-@media screen and (max-width: 768px) {
+footer a:hover {
+    color: #90C7E3;
+    text-decoration: underline;
+}
+
+
+/* ================================
+   TABLET / DESKTOP LAYOUT
+   ================================ */
+
+@media (min-width: 600px) {
+
+    nav {
+        flex-direction: row;
+        justify-content: center;
+    }
 
     nav a {
-        display: block;
-        margin: 8px;
+        border-bottom: none;
+        padding: 14px 18px;
     }
 
     .car-container {
-        display: block;
-    }
-
-    .car-card {
-        width: 100%;
-        margin-bottom: 20px;
+        grid-template-columns: repeat(3, 1fr);
     }
 
     .features {
-        display: block;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    form {
+        grid-template-columns: 180px 1fr;
+        align-items: center;
+    }
+
+    form label {
+        text-align: right;
+        padding-right: 10px;
+    }
+
+    form input[type="submit"],
+    form input[type="reset"] {
+        grid-column: 2;
+    }
+}
+
+
+/* ================================
+   LARGER DESKTOP SCREENS
+   ================================ */
+
+@media (min-width: 900px) {
+
+    header h1 {
+        font-size: 2.5em;
     }
 
     main {
-        padding: 15px;
+        padding: 35px;
     }
 
     .hero {
-        padding: 40px 20px;
+        padding: 60px 30px;
     }
+
+    .car-photo {
+        height: 200px;
+    }
+
 }
